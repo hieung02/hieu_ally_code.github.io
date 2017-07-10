@@ -1,0 +1,15 @@
+/*Initial CSS Setup*/
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  background: yellow;
+  height: 100%;
+}
+body{
+  background: pink;
+  font-family: "HelveticaNeue-Light","HelveticaNeue Light","Helvetica Neue","Helvetica",Arial,"Lucida Grande",sans-serif;
+  height: 100%;
+  width: 100%;
+}
