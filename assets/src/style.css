@@ -257,6 +257,10 @@ header, main, footer {
   padding-left: 1rem;
 }
 
+tbody tr:first-child{
+  font-weight: 600;
+}
+
 tbody tr:nth-child(odd) {
   background: #EEF5F0;
 }
