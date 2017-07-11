@@ -229,6 +229,7 @@ thead th, tfoot td {
 .tab .tab_links {
   background: #DAE8E0;
   border: none;
+  color: #5BA3C4;
   cursor: pointer;
   padding: 14px 12px;
   outline: none;
@@ -236,7 +237,8 @@ thead th, tfoot td {
 }
 
 .tab button.active{
-   background: #F5F5F5; 
+  color: #818181;
+  background: #F5F5F5; 
 }
 
 .tab_content {
@@ -251,6 +253,7 @@ thead th, tfoot td {
 }
 
 .tab_content section.active {
+  color: #818181;
   display: block;
 }
 
