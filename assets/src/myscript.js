@@ -25,7 +25,7 @@ $(document).ready(function(){
   });
 
   //create table via ally-code.json file
-  $.getJSON("http://127.0.0.1:8080/data/code-test.json", function(json){
+  $.getJSON("https://hieu-ally-code-challenge.netlify.com//data/code-test.json", function(json){
     var rateList = ''
     var tr = '';
     var urbank = json.filter(function(val){
@@ -63,12 +63,14 @@ $(document).ready(function(){
   })
 
   $(window).on('resize', function(){
+    
     if($(window).width() <= 700) {
       var navbar = '<button id="navbar">&#9776</button>'
       $('.nav').css({"display":"none"});
+
       if(!$('#navbar').length) {
         $("header").append(navbar);
-        $("#navbar").css({"background":"transparent","border":"none","font-size":"2rem","height":"45px","width":"45px"});
+        $("#navbar").css({"background":"transparent","border":"none","font-size":"2rem","height":"45px","outline":"none","width":"45px"});
         $('#navbar').on('click', function(){
           var navList = "<nav class='nav_list'><a href='#'><li class='nav_links'>home</li></a><a href='#'><li class='nav_links'>employee</li></a><a href='#'><li class='nav_links'>Company</li></a><a href='#'><li class='nav_links'>services</li></a><a href='#'><li class='nav_links'>contact</li></a></nav>"
           
