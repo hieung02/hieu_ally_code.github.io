@@ -62,6 +62,33 @@ $(document).ready(function(){
      
   })
 
+  $(window).on('resize', function(){
+    if($(window).width() <= 700) {
+      var navbar = '<button id="navbar">&#9776</button>'
+      $('.nav').css({"display":"none"});
+      if(!$('#navbar').length) {
+        $("header").append(navbar);
+        $("#navbar").css({"background":"transparent","border":"none","font-size":"2rem","height":"45px","width":"45px"});
+        $('#navbar').on('click', function(){
+          var navList = "<nav class='nav_list'><a href='#'><li class='nav_links'>home</li></a><a href='#'><li class='nav_links'>employee</li></a><a href='#'><li class='nav_links'>Company</li></a><a href='#'><li class='nav_links'>services</li></a><a href='#'><li class='nav_links'>contact</li></a></nav>"
+          
+          if(!$('.nav_list').length) {
+            $("header").after(navList);
+          }else{
+            $('.nav_list').toggle();
+          }
+        })
+      }
+    }else{
+      $('.nav').css({"display":"inherit"});
+      $('#navbar').remove();
+      $('.nav_list').remove();
+    }
+  })
+
+  
+
+ 
    
 
 
