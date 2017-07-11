@@ -1,18 +1,20 @@
 /*Initial CSS Setup*/
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 html{
-  background: yellow;
-  height: 100%;
+  /* background: yellow; */
+  height: 100%;   
 }
 body{
-  background: pink;
+  /* background: pink; */
   font-family: "HelveticaNeue-Light","HelveticaNeue Light","Helvetica Neue","Helvetica",Arial,"Lucida Grande",sans-serif;
-   font-size: 16px;
-  height: 100%;
+  font-size: 16px;
+  height: 100%; 
   width: 100%;
+  /* background: blue; */
 }
 #root {
   display: -webkit-box;
@@ -20,26 +22,36 @@ body{
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
   width: 100%;
 }
 a {
+  color:#3E94C2;
+  cursor: pointer;
   text-decoration: none;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: .5rem 0;
+}
+
+ul {
+   list-style-position: inside; 
+}
+
 /*Page - alignments: header, main, footer alignment*/
 header, main, footer {
-  padding: 0 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 3.2rem;
 }
 
 /*Header Style*/
 #header {
   align-items: center;
   background:#3890C0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
   justify-content: space-between;
 }
 
@@ -61,15 +73,14 @@ header, main, footer {
   display: -webkit-flex;
   display: flex;
   align-items: center;
-  height: 100%;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 .nav_links {
   box-sizing: border-box;
   color: #fff;
   list-style: none;
-  padding: 0 .5rem;
+  /* padding: 0 .5rem; */
   text-transform: lowercase;
 }
 
@@ -85,24 +96,120 @@ header, main, footer {
   -webkit-text-stroke-color: #fff;
 }
 
-
+/*Main content: Feature contents and login, news and archives*/
 #main{
-
-
-  background: white;
+   /* height: 100%;   */
+  justify-content: space-between;
+   /* overflow: scroll; */
+  /* background: white; */
 }
 
-/*footer CSS  */
-#footer {
-  /* align-items: center; */
-  background: #E7E8E9;
-  color: #529DC6;
+.main_contents, .aside_contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  font-size: 12px;
+  padding: 1rem 0;
+}
+
+.main_contents {
+  flex-direction: column;
+  justify-content: space-between; 
+  width: 70%;
+  /* background: coral;    */
+}
+
+.headline {
+  color: #935690;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+.list_headline {
+  color: #494949;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.special_announcement {
+  background: #BBD7C4;
+  padding: 0.5rem
+}
+
+.special_announcement .special_headline {
+  color: #6F226C;
+  font-size: 0.8rem;
+}
+
+.special_article {
+   max-height: 100px; 
+}
+
+.img_text {
+  display: flex;
+} 
+
+ .iphone_img { 
+  max-width: 100%;
+  position: relative;
+  top: -146px;
+}
+
+.rate_headline {
+  color:rgba(77, 77, 77, .8);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.rate_headline span {
+  color:rgba(77, 77, 77, 1);;
+}
+
+.bank_rates .rate_chart{
+  border-collapse: collapse;
+  text-align: left; 
+  width: 100%;
+}
+
+.rate_chart tbody td {
+  line-height: 30px;
+  padding-left: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+  background: #EEF5F0;
+}
+
+tbody tr:nth-child(even) {
+  background: #DDEBE1;
+}
+
+thead tr, tfoot tr{
+  background: white;
+}
+
+thead tr td:first-child, tbody tr td:first-child, tfoot tr td:first-child {
+  width: 50%;
+}
+
+thead th, tfoot td {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: .6rem;
+  font-weight: 100;
+}
+
+.aside_contents {
+  width: 25%;
+  
+  background: #ccc;
+}
+
+/*footer CSS  */
+#footer {
+  background: #E7E8E9;
+  color: #529DC6;
   font-size: .8rem;
-  height: 15%;
+  height: 8%;  
   justify-content: space-between;
   padding-top: 1rem; 
 }
