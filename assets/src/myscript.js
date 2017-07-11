@@ -25,7 +25,7 @@ $(document).ready(function(){
   });
 
   //create table via ally-code.json file
-  $.getJSON("https://hieu-ally-code-challenge.netlify.com/data/code-test.json", function(json){
+  $.getJSON("./data/code-test.json", function(json){
     var rateList = ''
     var tr = '';
     var urbank = json.filter(function(val){
