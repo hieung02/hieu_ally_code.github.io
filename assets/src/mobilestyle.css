@@ -12,6 +12,9 @@
   #main .aside_contents {
     display: none;
   }
+  .iphone_img {
+    display: none;
+  }
   .nav_list {
     background: #3890C0;
     padding: 0 3.2rem;
