@@ -10,6 +10,126 @@ html{
 body{
   background: pink;
   font-family: "HelveticaNeue-Light","HelveticaNeue Light","Helvetica Neue","Helvetica",Arial,"Lucida Grande",sans-serif;
+   font-size: 16px;
   height: 100%;
   width: 100%;
+}
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+/*Page - alignments: header, main, footer alignment*/
+header, main, footer {
+  padding: 0 4rem;
+}
+
+/*Header Style*/
+#header {
+  align-items: center;
+  background:#3890C0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Nav Style  */
+#header > .nav {
+  align-items: center; 
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav > a {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.nav_links {
+  box-sizing: border-box;
+  color: #fff;
+  list-style: none;
+  padding: 0 .5rem;
+  text-transform: lowercase;
+}
+
+/*Nav hover effects */
+.nav > a:hover {
+  background: #0D6997;
+}
+
+.nav > a:hover li {
+  color: #FAF9FA;
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke-width: 0.6px;
+  -webkit-text-stroke-color: #fff;
+}
+
+
+#main{
+
+
+  background: white;
+}
+
+/*footer CSS  */
+#footer {
+  /* align-items: center; */
+  background: #E7E8E9;
+  color: #529DC6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: .8rem;
+  height: 15%;
+  justify-content: space-between;
+  padding-top: 1rem; 
+}
+
+#footer > .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer .nav > a {
+  align-items: initial; 
+  padding: 0 1rem;  
+}
+
+#footer .nav_links{
+  color: #529DC6;
+} 
+
+#footer > .nav > a:hover {
+  background: #E7E8E9;
+}
+
+#footer a:hover li {
+  -webkit-text-fill-color: #529DC6;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: #529DC6;
 }
