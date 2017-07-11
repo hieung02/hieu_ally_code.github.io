@@ -12,11 +12,26 @@
 </head>
 <body>
   <div id='root'>
-    <div id='cover' class='filter'>
-      <div id='sign_in'>
+    <div class='login_container'>
+      <div id='cover' class='filter'></div>
+      <form method='POST' action='#' id='login' class=''>
+        <div class='sign_header'>
+          <p>Sign In To Your Account</p>
+          <img src='./img/times.png' alt='exit login screen'/>
+        </div>
+        <div class='login_info'>
+          <label>Username
+            <input type="text" name='username' required>
+          </label>
+          <label>Password
+            <input type="password" name='psw'>
+          </label>
+          <button type='submit'>Login</button>
+        </div>
         
-      </div>
+      </form>
     </div>
+
     <header id='header'>
       <a href='#'><img class="urbank_logo" src='./img/urbank.png' alt='U R Bank logo '/></a>
       <nav class='nav'>
