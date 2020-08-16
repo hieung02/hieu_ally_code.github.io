@@ -29,7 +29,7 @@ $(document).ready(function () {
   });
 
   //create table via ally-code.json file
-  $.getJSON("https://hieu-ally-code-challenge.netlify.com/data/code-test.json?callback=?", function (json) {
+  $.getJSON("https://hieu-ally-code-challenge.netlify.app/data/code-test.json?callback=?%22", function (json) {
     var rateList = ''
     var tr = '';
     var urbank = json.filter(function (val) {
