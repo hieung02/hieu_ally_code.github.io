@@ -32,11 +32,9 @@ $(document).ready(function () {
   $.getJSON("https://hieu-ally-code-challenge.netlify.app/data/code-test.json?callback=?%22", function (json) {
     var rateList = ''
     var tr = '';
-    var urbank = json.filter(function (val) {
-      return val["name"] === "URBank";
-    });
-    var banks = json.filter(function (val) {
-      return val["name"] !== "URBank";
+
+    var banks = json.sort(function (a, b) {
+      return b['apy'] - a['apy'];
     });
 
     function createRateChart(obj) {
@@ -59,7 +57,7 @@ $(document).ready(function () {
       tr += '</tr>'
     }
 
-    urbank.forEach(createRateChart);
+
     banks.forEach(createRateChart);
 
     $('tbody').append(tr);
